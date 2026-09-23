@@ -1,58 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 1</title>
-    <style>
-        strong {
-            color: rgb(145, 18, 18);
-        }
-        h2 {
-            color:rgb(145, 18, 18);
-            background-color: rgb(210, 112, 112)
-        }
-        a.site:link {
-            color:purple;
-        }
-        a.site:visited {
-            color:purple;
-        }
-        a:hover {
-            color: green;
-            font: bold;
-        }
-        a:active {
-            color:aquamarine;
-        }
-        del{color:grey;}
-    </style>
+<meta charset="UTF-8">
+<title>Midnight Blue Event</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    background-color: #111;
+    color: #333;
+    margin: 0;
+  }
+
+  header {
+    text-align: center;
+    padding: 30px;
+    background-color: #4e0303;
+    color: white;
+  }
+
+  .event-image {
+    display: block;
+    max-width: 500px;
+    width:100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel {
+    padding: 10px;
+  }
+  .about {
+    background-color: #f0e2c8;
+    color: darkred;
+  }
+  .highlights {
+    background-color: #1e2b3c;
+    color: white;
+  }
+  .program {
+    background-color: #e0c088;
+    color: darkred;
+  }
+  .tickets {
+    background-color: #24344a;
+    color: white;
+  }
+
+  .footer {
+    background-color: #8b2e3f;
+    color: white;
+    text-align: center;
+    padding: 40px;
+  }
+
+  strong {
+    color: rgb(189, 65, 43);
+  }
+  .brown {
+    color: rgb(183, 132, 29)
+  }
+  em {
+    font-style: italic;
+  }
+  ins {
+    background-color: rgb(163, 232, 209);
+    color: green;
+    text-decoration: none;
+  }
+  address {
+    font-style: normal;
+  }
+
+  /* --- 8. Link states --- */
+  a:link {
+    color: #e0b050;
+  }
+  a:visited {
+    color: #b08040;
+  }
+  a:hover {
+    color: #fff;
+  }
+  a:active {
+    color: aquamarine;
+  }
+</style>
 </head>
 
 <body>
-    <h1><strong>JAZZ NIGHT 2026</strong></h1></br>
-    <p><i>Live Music & Dance</i></p></br>
-    <span><strong>Saturday, October 10, 2026</strong></span></br>
-    <span>7:30 PM - 10:30 PM</span></br>
+  <header>
+    <h1>Midnight Blue</h1>
+    <p>A Night of Jazz, Rhythm & Dance</p>
+    <p>7:30 PM - 10:30 PM &middot; Taipei</p>
+  </header>
 
-    <a href="https://google.com"><img height="300" width="200" alt="Poster" src="jazz.jpg"></a>
+  <a href="https://example.com/midnight-blue" class="event-image">
+    <img src="jazz.jpg" alt="Midnight Blue event banner">
+  </a>
+  <p style="text-align:center;"><em>Click the image to visit the event website.</em></p>
 
-    <h2>About the Event</h2>
-    <p>Join us for an evening of <strong>live jazz, dancing and good music.</strong></p></br>
-    <p>Ticket: <del>$30</del></p>
-    <p><strong>Special Price: $20</strong></p>
+  <div class="container">
 
-    <h2>More Information</h2>
+    <div class="panel about">
+      <h2>About the Night</h2>
+      <p>Welcome to <strong>Midnight Blue</strong>, a night inspired by classic jazz clubs and social dancing.</p>
+      <p>Enjoy live music, meet new people, and spend the evening dancing to <em>swing, jazz, and rhythm &amp; blues</em>.</p>
+    </div>
 
-    <p><a href="https://google.com">Visit our website</a></p>
-    <p><a href="mailto:jerreljanssen2@gmail.com">Email us</a></p>
-    <p><a href="callto:0640602543">Call us</a></p>
+    <div class="panel highlights">
+      <h2><strong class="brown">Night Highlights</strong></h2>
+      <p><strong class="brown">Live Band</strong></br> The Blue Notes Quartet</p>
+      <p><strong class="brown">Social Dance:</strong></br> An open dance floor for everyone.</p>
+      <p><strong class="brown">Dress Up:</strong></br> Vintage style encouraged, but not required.</p>
+      <p>Music starts at 8:00 PM</p>
+    </div>
 
-    <h2>Contact</h2>
+    <div class="panel program">
+      <h2>Tonight's Program</h2>
+      <p><strong>7:30 PM</strong> &middot; Doors Open</p>
+      <p><strong>8:00 PM</strong> &middot; Live Jazz Set</p>
+      <p><strong>9:00 PM</strong> &middot; Social Dance</p>
+      <p><strong>10:00 PM</strong> &middot; Rhythm &amp; Blues Jam</p>
+      <p>
+        <strong>Schedule Update:</strong><br>
+        <del>Doors open at 8:00 PM.</del><br>
+        <ins>Doors now open at 7:30 PM.</ins>
+      </p>
+    </div>
 
-    <p><i>Jazz Night Taipei</i></p>
-    <p><i>123 Music Street, Taipei</i></p>
-    <p><a href="mailto:jerreljanssen2@gmail.com">jazznight@example.com</a></p>
+    <div class="panel tickets">
+      <h2><strong class="brown">Tickets</strong></h2>
+      <p>Early Bird: <del>NT$800</del><br><strong class="brown">Special Price: NT$600</strong></p>
+      <p>Your ticket includes: Live music + Social dance + Welcome drink</p>
+      <p>Only <strong class="brown">80 tickets</strong> are available.</p>
+      <p><a href="https://example.com/tickets">Reserve Your Ticket</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <h2>Contact Us</h2>
+    <address>
+      Midnight Blue Jazz Club<br>
+      88 Blue Note Lane, Taipei<br>
+      <a href="mailto:hello@midnightblue.example">hello@midnightblue.example</a> |
+      <a href="tel:+886212345678">+886-2-1234-5678</a>
+    </address>
+  </div>
 
 </body>
 </html>

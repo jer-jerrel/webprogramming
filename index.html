@@ -1,101 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 1</title>
-    <style>
-        strong {
-            color: rgb(12, 228, 134);
-            background-color: black;
-        }
-        em {
-            color:purple;
-        }
-        a:link {
-            color:pink;
-        }
-        a:visited {
-            color:blue;
-            background-color: black;
-        }
-        a:hover {
-            color: green;
-            font: bold;
-        }
-        a:active {
-            color:aquamarine;
-        }
-        del{background-color: tomato;}
-        ins{background-color: yellow;}
-    </style>
+<meta charset="UTF-8">
+<title>Midnight Blue Event</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    background-color: #111;
+    color: #333;
+    margin: 0;
+  }
+
+  header {
+    text-align: center;
+    padding: 30px;
+    background-color: #4e0303;
+    color: white;
+  }
+
+  .event-image {
+    display: block;
+    max-width: 500px;
+    width:100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel {
+    padding: 10px;
+  }
+  .about {
+    background-color: #f0e2c8;
+    color: darkred;
+  }
+  .highlights {
+    background-color: #1e2b3c;
+    color: white;
+  }
+  .program {
+    background-color: #e0c088;
+    color: darkred;
+  }
+  .tickets {
+    background-color: #24344a;
+    color: white;
+  }
+
+  .footer {
+    background-color: #8b2e3f;
+    color: white;
+    text-align: center;
+    padding: 40px;
+  }
+
+  strong {
+    color: rgb(189, 65, 43);
+  }
+  .brown {
+    color: rgb(183, 132, 29)
+  }
+  em {
+    font-style: italic;
+  }
+  ins {
+    background-color: rgb(163, 232, 209);
+    color: green;
+    text-decoration: none;
+  }
+  address {
+    font-style: normal;
+  }
+
+  /* --- 8. Link states --- */
+  a:link {
+    color: #e0b050;
+  }
+  a:visited {
+    color: #b08040;
+  }
+  a:hover {
+    color: #fff;
+  }
+  a:active {
+    color: aquamarine;
+  }
+</style>
 </head>
 
 <body>
-    <h1>My Favorite Planet</h1>
+  <header>
+    <h1>Midnight Blue</h1>
+    <p>A Night of Jazz, Rhythm & Dance</p>
+    <p>7:30 PM - 10:30 PM &middot; Taipei</p>
+  </header>
 
-    <h2>Mars</h2>
+  <a href="https://example.com/midnight-blue" class="event-image">
+    <img src="jazz.jpg" alt="Midnight Blue event banner">
+  </a>
+  <p style="text-align:center;"><em>Click the image to visit the event website.</em></p>
 
-    <p>
-        Mars is the <b>fourth</b> planet from the Sun.
-    </p>
+  <div class="container">
 
-    <p>
-        I think Mars is <i>one of the most interesting planets</i>
-        in our solar system.
-    </p>
+    <div class="panel about">
+      <h2>About the Night</h2>
+      <p>Welcome to <strong>Midnight Blue</strong>, a night inspired by classic jazz clubs and social dancing.</p>
+      <p>Enjoy live music, meet new people, and spend the evening dancing to <em>swing, jazz, and rhythm &amp; blues</em>.</p>
+    </div>
 
-    <hr>
+    <div class="panel highlights">
+      <h2><strong class="brown">Night Highlights</strong></h2>
+      <p><strong class="brown">Live Band</strong></br> The Blue Notes Quartet</p>
+      <p><strong class="brown">Social Dance:</strong></br> An open dance floor for everyone.</p>
+      <p><strong class="brown">Dress Up:</strong></br> Vintage style encouraged, but not required.</p>
+      <p>Music starts at 8:00 PM</p>
+    </div>
 
-    <h3><del>Some Facts</del></h3>
-    <h3><ins>Some Facts Again</ins></h3>
+    <div class="panel program">
+      <h2>Tonight's Program</h2>
+      <p><strong>7:30 PM</strong> &middot; Doors Open</p>
+      <p><strong>8:00 PM</strong> &middot; Live Jazz Set</p>
+      <p><strong>9:00 PM</strong> &middot; Social Dance</p>
+      <p><strong>10:00 PM</strong> &middot; Rhythm &amp; Blues Jam</p>
+      <p>
+        <strong>Schedule Update:</strong><br>
+        <del>Doors open at 8:00 PM.</del><br>
+        <ins>Doors now open at 7:30 PM.</ins>
+      </p>
+    </div>
 
-    <p>
-        <strong>Mars</strong> has 2 moons:<br>
-        Phobos<br>
-        Deimos
-    </p>
+    <div class="panel tickets">
+      <h2><strong class="brown">Tickets</strong></h2>
+      <p>Early Bird: <del>NT$800</del><br><strong class="brown">Special Price: NT$600</strong></p>
+      <p>Your ticket includes: Live music + Social dance + Welcome drink</p>
+      <p>Only <strong class="brown">80 tickets</strong> are available.</p>
+      <p><a href="https://example.com/tickets">Reserve Your Ticket</a></p>
+    </div>
 
-    <p>
-        The average distance from Mars to the Sun is about
-        2.28 &times; 10<sup>8</sup> km.
-    </p>
+  </div>
 
-    <p>
-        Water is H<sub>2</sub>O.
-    </p>
+  <div class="footer">
+    <h2>Contact Us</h2>
+    <address>
+      Midnight Blue Jazz Club<br>
+      88 Blue Note Lane, Taipei<br>
+      <a href="mailto:hello@midnightblue.example">hello@midnightblue.example</a> |
+      <a href="tel:+886212345678">+886-2-1234-5678</a>
+    </address>
+  </div>
 
-    <hr>
-
-    <h3>Why I Like Mars</h3>
-
-    <p>
-        Mars is cold and dry,<br>
-        but scientists are still exploring it.
-    </p>
-
-    <p>
-        <b>Maybe humans will visit Mars one day!</b>
-    </p>
-
-    <hr>
-
-    <h3>Keep Exploring</h3>
-
-    <p>
-        <b>Remember:</b> science begins with curiosity.
-    </p>
-
-    <p>
-        I <em>really</em> want to see humans explore Mars in the future.
-    </p>
-
-    <p>
-        <abbr title="National Aeronautics and Space Administration">NASA</abbr>
-        has sent many missions to study Mars.
-    </p>
-
-    <p><a href="www.google.com">My website</a></p>
-    <span><a href="mailto:jerreljanssen2@gmail.com">My email</a></span>
 </body>
 </html>
