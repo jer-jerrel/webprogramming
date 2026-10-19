@@ -120,6 +120,7 @@
         .intro {
             padding: 60px 80px 0;
             color: #222;
+            overflow: hidden;
         }
 
         .intro h4 {
@@ -136,32 +137,26 @@
             margin: 0 0 32px;
         }
 
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;   /* text left, image right */
-            gap: 48px;
-            align-items: start;
+        .intro-img {
+            float: right;
+            width: 320px;
+            height: 240px;
+            object-fit: cover;
+            margin-left: 25px;
+            border-radius: 4px;
         }
 
-        .intro-text h3 {
+        .intro h3 {
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin: 0 0 16px;
         }
 
-        .intro-text p {
+        .intro p {
             font-size: 14px;
             line-height: 1.6;
             margin: 0;
-        }
-
-        .intro-grid img {
-            display: block;
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-            border-radius: 4px;
         }
 
         /* ---------- SECTION 2: NEIGHBORHOODS ---------- */
@@ -262,7 +257,7 @@
             position: absolute;
             inset: 0;
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
             justify-content: flex-end;
             text-align: center;
@@ -346,18 +341,14 @@
         <h4>01 / DISCOVER</h4>
         <h1>Where tradition meets tomorrow.</h1>
 
-        <div class="intro-grid">
-            <div class="intro-text">
-                <h3>More than a destination</h3>
-                <p>
-                    Tokyo is a city that never stops surprising you. One moment,
-                    you are surrounded by bright signs and busy crossings. A few
-                    streets away, you might discover a quiet shrine hidden between
-                    modern buildings.
-                </p>
-            </div>
-            <img src="discover.jpg" alt="Colorful Tokyo street">
-        </div>
+        <img class="intro-img" src="discover.jpg" alt="Colorful Tokyo street">
+        <h3>More than a destination</h3>
+        <p>
+            Tokyo is a city that never stops surprising you. One moment,
+            you are surrounded by bright signs and busy crossings. A few
+            streets away, you might discover a quiet shrine hidden between
+            modern buildings.
+        </p>
     </section>
 
     <section class="discover" id="neighborhoods">
