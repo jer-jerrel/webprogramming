@@ -1,0 +1,316 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+/* ---------- SHARED ---------- */
+/* Georgia headings */
+.hero-content h1,
+.section-title,
+.subtitle,
+.photo-overlay h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+/* Section layout: --top = text sections with floated images, default = spaced sections */
+.section {
+    padding: 40px 80px 60px;
+}
+
+.section--top {
+    padding: 60px 80px 0;
+    overflow: hidden;
+}
+
+/* "01 / DISCOVER" label */
+.eyebrow {
+    font-size: 10px;
+    color: rgb(147, 13, 13);
+    letter-spacing: 0.2em;
+}
+
+/* Big section heading */
+.section-title {
+    font-size: 35px;
+    color: black;
+    margin: 0 0 24px;
+}
+
+/* Small uppercase heading */
+.kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+}
+
+/* Body text */
+.text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+}
+
+/* Floated images */
+.float-img {
+    width: 320px;
+    border-radius: 4px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* ---------- NAVBAR ---------- */
+.topbar .page {
+    padding: 0px 40px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: black;
+    text-decoration: none;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
+    height: 540px;
+    background-image: url("skyline.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    padding: 60px 80px;
+}
+
+.top {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e6c07b;
+    margin: 0 0 16px;
+}
+
+.hero-content h1 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.05;
+    max-width: 6ch;
+    margin: 0;
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background: #e6c07b;
+    margin: 24px 0;
+}
+
+.hero-text {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 320px;
+    margin: 0 0 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #e6c07b;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #f5d99e;
+    transform: translateY(-2px);
+}
+
+/* ---------- SECTION 3: PHOTO JOURNAL ---------- */
+.journal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.journal-header .section-title {
+    margin: 0;
+}
+
+.journal-note {
+    max-width: 220px;
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 20px;
+    border-radius: 4px;
+    background: rgba(74, 9, 9, 0.65);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.photo-overlay h4 {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.photo-overlay p {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+.caption {
+    font-size: 10px;
+    margin: 16px 0 0;
+}
+
+/* ---------- SECTION 4: TRAVEL PLANNER ---------- */
+.subtitle {
+    font-size: 24px;
+    color: black;
+    margin: 48px 0 12px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 16px;
+}
+
+.data-table td {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table tbody tr:nth-child(even) td {
+    background-color: #faf6ee;
+}
+
+.data-table .row-head {
+    background-color: #f7efe3;
+    font-weight: 700;
+}
+
+.data-table .highlight {
+    background-color: #f7e4df;
+    color: rgb(147, 13, 13);
+    font-weight: 700;
+    text-align: center;
+}
+
+.data-table .cost {
+    text-align: right;
+}
+
+/* ---------- TAGLINE ---------- */
+.tagline {
+    background-color: #f7efe3;
+    text-align: center;
+    padding: 32px 20px;
+}
+
+.tagline h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.tagline p {
+    font-size: 12px;
+    margin: 0;
+}

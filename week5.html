@@ -4,311 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOKYO</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* ---------- NAVBAR ---------- */
-        .topbar .page {
-            padding: 0px 40px 0px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .brand {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: black;
-            text-decoration: none;
-        }
-
-        /* ---------- HERO ---------- */
-        .hero {
-            position: relative;
-            height: 540px;
-            background-image: url("skyline.jpg");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-        }
-
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.85),
-                rgba(0, 0, 0, 0.1)
-            );
-        }
-
-        .hero-content {
-            position: relative;
-            color: white;
-            padding: 60px 80px;
-        }
-
-        .top {
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #e6c07b;
-            margin: 0 0 16px;
-        }
-
-        .hero-content h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 60px;
-            line-height: 1.05;
-            max-width: 6ch;
-            margin: 0;
-        }
-
-        .divider {
-            width: 40px;
-            height: 2px;
-            background: #e6c07b;
-            margin: 24px 0;
-        }
-
-        .hero-content p {
-            font-size: 14px;
-            line-height: 1.6;
-            max-width: 320px;
-            margin: 0 0 28px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 18px;
-            background-color: #e6c07b;
-            color: #1a1a1a;
-            font-size: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background-color 0.2s, transform 0.2s;
-        }
-
-        .button:hover {
-            background-color: #f5d99e;
-            transform: translateY(-2px);
-        }
-
-        /* ---------- SECTION 1: DISCOVER ---------- */
-        .intro {
-            padding: 60px 80px 0;
-            color: #222;
-            overflow: hidden;
-        }
-
-        .intro h4 {
-            font-size: 10px;
-            color: rgb(147, 13, 13);
-            letter-spacing: 0.2em;
-        }
-
-        .intro h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 35px;
-            font-weight: 500;
-            color: black;
-            margin: 0 0 32px;
-        }
-
-        .intro-img {
-            float: right;
-            width: 320px;
-            height: 240px;
-            object-fit: cover;
-            margin-left: 25px;
-            border-radius: 4px;
-        }
-
-        .intro h3 {
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin: 0 0 16px;
-        }
-
-        .intro p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* ---------- SECTION 2: NEIGHBORHOODS ---------- */
-        .discover-content {
-            color: #222;
-            padding: 60px 80px 0;
-            overflow: hidden;
-        }
-
-        .discover-content h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 35px;
-            font-weight: 500;
-            color: black;
-        }
-
-        .discover-content h4 {
-            font-size: 10px;
-            color: rgb(147, 13, 13);
-            letter-spacing: 0.2em;
-        }
-
-        .discover-content h3 {
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin: 0 0 16px;
-        }
-
-        .discover-content p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .left {
-            float: left;
-            width: 320px;
-            margin-right: 25px;
-            border-radius: 4px;
-        }
-
-        .right {
-            float: right;
-            margin-left: 25px;
-        }
-
-        /* ---------- SECTION 3: PHOTO JOURNAL ---------- */
-        .journal {
-            padding: 40px 80px 60px;
-        }
-
-        .journal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 24px;
-        }
-
-        .journal h4 {
-            font-size: 10px;
-            color: rgb(147, 13, 13);
-            letter-spacing: 0.2em;
-        }
-
-        .journal h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 35px;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        .journal-header p {
-            max-width: 220px;
-            font-size: 11px;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .photo {
-            position: relative;
-        }
-
-        .photo img {
-            display: block;
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
-        .photo-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            text-align: center;
-            padding: 20px;
-            border-radius: 4px;
-            background: rgba(74, 9, 9, 0.65);
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .photo-overlay h4 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 20px;
-            color: white;
-            margin: 0 0 8px;
-        }
-
-        .photo-overlay p {
-            font-size: 11px;
-            letter-spacing: 0.1em;
-            margin: 0;
-        }
-
-        .photo:hover .photo-overlay {
-            opacity: 1;
-        }
-
-        .caption {
-            font-size: 10px;
-            margin: 16px 0 0;
-        }
-
-        /* ---------- TAGLINE ---------- */
-        .tagline {
-            background-color: #f7efe3;
-            text-align: center;
-            padding: 32px 20px;
-        }
-
-        .tagline h2 {
-            font-size: 18px;
-            margin: 0 0 8px;
-        }
-
-        .tagline p {
-            font-size: 12px;
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="topbar" id="top">
@@ -319,6 +15,7 @@
                 <li><a href="#discover">Discover</a></li>
                 <li><a href="#neighborhoods">Neighborhoods</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#planner">Planner</a></li>
             </ul>
         </div>
     </header>
@@ -329,7 +26,7 @@
             <p class="top">Live Music · Friday 8 PM</p>
             <h1>Jazz After Dark.</h1>
             <div class="divider"></div>
-            <p>
+            <p class="hero-text">
                 An intimate evening of swinging rhythms,<br>
                 warm lights, and unforgettable live music.
             </p>
@@ -337,13 +34,13 @@
         </div>
     </section>
 
-    <section class="intro" id="discover">
-        <h4>01 / DISCOVER</h4>
-        <h1>Where tradition meets tomorrow.</h1>
+    <section class="section section--top" id="discover">
+        <h4 class="eyebrow">01 / DISCOVER</h4>
+        <h1 class="section-title">Where tradition meets tomorrow.</h1>
 
-        <img class="intro-img" src="discover.jpg" alt="Colorful Tokyo street">
-        <h3>More than a destination</h3>
-        <p>
+        <img class="float-img float-right" src="discover.jpg" alt="Colorful Tokyo street">
+        <h3 class="kicker">More than a destination</h3>
+        <p class="text">
             Tokyo is a city that never stops surprising you. One moment,
             you are surrounded by bright signs and busy crossings. A few
             streets away, you might discover a quiet shrine hidden between
@@ -351,27 +48,26 @@
         </p>
     </section>
 
-    <section class="discover" id="neighborhoods">
-        <div class="discover-content">
-            <h4>02 / NEIGHBORHOODS</h4>
-            <h1>Slow Down. Look Closer.</h1>
-            <img class="left" src="temple.jpg" alt="Temple">
-            <h3>More than a destination</h3>
-            <p>
-                Temple Temple Temple Temple Temple Temple Temple Temple
-                Temple Temple Temple Temple Temple Temple Temple Temple
-                Temple Temple Temple Temple Temple Temple Temple Temple
-            </p>
-        </div>
+    <section class="section section--top" id="neighborhoods">
+        <h4 class="eyebrow">02 / NEIGHBORHOODS</h4>
+        <h1 class="section-title">Slow Down. Look Closer.</h1>
+
+        <img class="float-img float-left" src="temple.jpg" alt="Temple">
+        <h3 class="kicker">More than a destination</h3>
+        <p class="text">
+            Temple Temple Temple Temple Temple Temple Temple Temple
+            Temple Temple Temple Temple Temple Temple Temple Temple
+            Temple Temple Temple Temple Temple Temple Temple Temple
+        </p>
     </section>
 
-    <section class="journal" id="gallery">
+    <section class="section" id="gallery">
         <div class="journal-header">
             <div>
-                <h4>03 / PHOTO JOURNAL</h4>
-                <h1>Tokyo in three frames.</h1>
+                <h4 class="eyebrow">03 / PHOTO JOURNAL</h4>
+                <h1 class="section-title">Tokyo in three frames.</h1>
             </div>
-            <p>Move your mouse over each photograph to reveal the story behind the image.</p>
+            <p class="journal-note">Move your mouse over each photograph to reveal the story behind the image.</p>
         </div>
 
         <div class="gallery">
@@ -399,6 +95,75 @@
         </div>
 
         <p class="caption">Hover over a photo to see the fade-in overlay effect</p>
+    </section>
+
+    <section class="section" id="planner">
+        <h4 class="eyebrow">04 / TRAVEL PLANNER</h4>
+        <h1 class="section-title">Three Days in Tokyo.</h1>
+        <p class="text">Plan your mornings, afternoons, and evenings with this simple three-day itinerary.</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-head">Day 1</td>
+                    <td>Asakusa Temple</td>
+                    <td>Ueno Park</td>
+                    <td>Shibuya</td>
+                </tr>
+                <tr>
+                    <td class="row-head">Day 2</td>
+                    <td>Meiji Shrine</td>
+                    <td>Harajuku</td>
+                    <td>Shinjuku</td>
+                </tr>
+                <tr>
+                    <td class="row-head">Day 3</td>
+                    <td class="highlight" colspan="2">Tokyo DisneySea</td>
+                    <td>Odaiba</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="subtitle">Travel Budget</h2>
+        <p class="text">A sample budget for transportation and meals in Tokyo.</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Item</th>
+                    <th class="cost">Estimated Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-head" rowspan="2">Transportation</td>
+                    <td>Metro</td>
+                    <td class="cost">¥1,000</td>
+                </tr>
+                <tr>
+                    <td>Train</td>
+                    <td class="cost">¥1,500</td>
+                </tr>
+                <tr>
+                    <td class="row-head" rowspan="2">Food</td>
+                    <td>Lunch</td>
+                    <td class="cost">¥1,200</td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td class="cost">¥2,000</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section class="tagline">

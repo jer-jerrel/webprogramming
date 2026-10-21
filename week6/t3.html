@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-spacing: 2px;
+        }
+        th {
+            padding: 10px;
+            text-align: left;
+            background-color: rgb(51, 50, 50);
+            width: 130px;
+            color: white;
+        }
+        td {
+            text-align: center;
+            padding: 10px;
+            width: 130px;
+        }
+        .green {
+            background-color: rgb(151, 229, 151);
+        }
+        .orange {
+            background-color: orange;
+        }
+        .blue {
+            background-color: skyblue;
+        }
+        .dark {
+            background-color: rgb(126, 125, 125);
+        }
+        .light {
+            background-color: rgb(184, 183, 183);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th colspan="2">Mon</th>
+            <th colspan="2">Tue</th>
+            <th colspan="2">Wed</th>
+        </tr>
+        <tr>
+            <td class="dark">7:30 AM</td>
+            <td colspan="2" class="dark">Breakfast</td>
+            <td colspan="2" class="dark">Breakfast</td>
+            <td colspan="2" class="dark">Breakfast</td>
+        </tr>
+        <tr>
+            <td class="light">8:00 AM</td>
+            <td rowspan="2" colspan="2" class="green">Business: Lecture<br> Bldg B, Rm 256</td>
+            <td rowspan="3" colspan="2" class="orange">Physics: Lab<br> Bldg J, Rm 309</td>
+            <td rowspan="2" colspan="2" class="green">Business: Lecture<br> Bldg B, Rm 256</td>
+        </tr>
+        <tr>
+            <td class="dark">8:30 AM</td>
+        </tr>
+        <tr>
+            <td class="light">9:00 AM</td>
+            <td colspan="2" rowspan="2" class="blue">Applied Math<br> Bldg H, Rm 100</td>
+            <td colspan="2" rowspan="2" class="blue">Applied Math<br> Bldg H, Rm 100</td>
+        </tr>
+        <tr>
+            <td class="dark">9:30 AM</td>
+            <td class="dark"></td>
+        </tr>
+        <tr>
+            <td class="light">10:00 AM</td>
+            <td colspan="2" class="light"></td>
+            <td colspan="2" class="light"></td>
+            <td colspan="2" class="light"></td>
+        </tr>
+    </table>
+</body>
+</html>
