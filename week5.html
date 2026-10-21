@@ -3,172 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOKYO</title>
+    <title>Jerrel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="topbar" id="top">
-        <div class="page">
-            <a class="brand" href="#top">TOKYO.</a>
 
-            <ul class="nav">
-                <li><a href="#discover">Discover</a></li>
-                <li><a href="#neighborhoods">Neighborhoods</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#planner">Planner</a></li>
-            </ul>
-        </div>
+    <header id="top">
+        <a class="logo" href="#top">JERREL.</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#studies">Studies</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
     </header>
 
     <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <p class="top">Live Music · Friday 8 PM</p>
-            <h1>Jazz After Dark.</h1>
-            <div class="divider"></div>
-            <p class="hero-text">
-                An intimate evening of swinging rhythms,<br>
-                warm lights, and unforgettable live music.
-            </p>
-            <a href="#" class="button">Explore the event -></a>
+        <div class="hero-text">
+            <p class="small">Student · Developer</p>
+            <h1>Hi, I'm Jerrel.</h1>
+            <div class="line"></div>
+            <p>IT student from the Netherlands, currently studying in Taipei. I like building things and figuring out how they work.</p>
+            <a href="#projects" class="btn">See my projects</a>
         </div>
     </section>
 
-    <section class="section section--top" id="discover">
-        <h4 class="eyebrow">01 / DISCOVER</h4>
-        <h1 class="section-title">Where tradition meets tomorrow.</h1>
-
-        <img class="float-img float-right" src="discover.jpg" alt="Colorful Tokyo street">
-        <h3 class="kicker">More than a destination</h3>
-        <p class="text">
-            Tokyo is a city that never stops surprising you. One moment,
-            you are surrounded by bright signs and busy crossings. A few
-            streets away, you might discover a quiet shrine hidden between
-            modern buildings.
+    <section class="section" id="about">
+        <p class="label">01 / ABOUT ME</p>
+        <h2 class="title">A little about me.</h2>
+        <img class="pic-right" src="goat.png" alt="Photo of me">
+        <h3>More than a student</h3>
+        <p>
+            I'm a fourth-year IT student from the Netherlands. Outside of class
+            I like going to the gym and exploring new places. 
+            I'm curious about how software behaves
+            once it's running, and I like projects where I can see how things
+            work behind the scenes.
         </p>
     </section>
 
-    <section class="section section--top" id="neighborhoods">
-        <h4 class="eyebrow">02 / NEIGHBORHOODS</h4>
-        <h1 class="section-title">Slow Down. Look Closer.</h1>
-
-        <img class="float-img float-left" src="temple.jpg" alt="Temple">
-        <h3 class="kicker">More than a destination</h3>
-        <p class="text">
-            Temple Temple Temple Temple Temple Temple Temple Temple
-            Temple Temple Temple Temple Temple Temple Temple Temple
-            Temple Temple Temple Temple Temple Temple Temple Temple
+    <section class="section" id="studies">
+        <p class="label">02 / STUDIES</p>
+        <h2 class="title">What I'm learning.</h2>
+        <img class="pic-left" src="tech.png" alt="Taipei Tech campus">
+        <h3>Software, security and observability</h3>
+        <p>
+            My studies focus on software development, and I'm especially
+            interested in security logging, API gateways and monitoring tools.
+            This semester I'm on exchange at Taipei Tech, which has been a good
+            way to see how another university and another country approach the
+            same field.
         </p>
     </section>
 
     <section class="section" id="gallery">
-        <div class="journal-header">
+        <div class="gallery-top">
             <div>
-                <h4 class="eyebrow">03 / PHOTO JOURNAL</h4>
-                <h1 class="section-title">Tokyo in three frames.</h1>
+                <p class="label">03 / PHOTO JOURNAL</p>
+                <h2 class="title">Taipei in three frames.</h2>
             </div>
-            <p class="journal-note">Move your mouse over each photograph to reveal the story behind the image.</p>
+            <p class="note">Hover over each photo to see where it was taken.</p>
         </div>
 
-        <div class="gallery">
+        <div class="photos">
             <div class="photo">
-                <img src="tokyo1.jpg" alt="Tokyo street at dusk">
-                <div class="photo-overlay">
-                    <h4>City Lights</h4>
-                    <p>TOKYO AFTER DARK.</p>
+                <img src="ximen.png" alt="Ximending street">
+                <div class="cover">
+                    <h4>Ximending</h4>
+                    <p>MY NEIGHBORHOOD.</p>
                 </div>
             </div>
             <div class="photo">
-                <img src="tokyo2.jpg" alt="Tokyo skyline and mountains">
-                <div class="photo-overlay">
-                    <h4>Old Tokyo</h4>
-                    <p>TIMELESS TRADITIONS.</p>
+                <img src="campus.png" alt="Taipei Tech campus">
+                <div class="cover">
+                    <h4>Campus</h4>
+                    <p>TAIPEI TECH.</p>
                 </div>
             </div>
             <div class="photo">
-                <img src="tokyo3.jpg" alt="Red lantern in a Tokyo alley">
-                <div class="photo-overlay">
-                    <h4>Street Stories</h4>
-                    <p>EVERYDAY DISCOVERIES.</p>
+                <img src="nightmarket.png" alt="Night market">
+                <div class="cover">
+                    <h4>Night Market</h4>
+                    <p>FAVORITE FOOD SPOT.</p>
                 </div>
             </div>
         </div>
-
-        <p class="caption">Hover over a photo to see the fade-in overlay effect</p>
     </section>
 
-    <section class="section" id="planner">
-        <h4 class="eyebrow">04 / TRAVEL PLANNER</h4>
-        <h1 class="section-title">Three Days in Tokyo.</h1>
-        <p class="text">Plan your mornings, afternoons, and evenings with this simple three-day itinerary.</p>
+    <section class="section" id="projects">
+        <p class="label">04 / PROJECTS &amp; SKILLS</p>
+        <h2 class="title">What I've worked on.</h2>
+        <p>A quick overview of my projects and skills.</p>
 
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Morning</th>
-                    <th>Afternoon</th>
-                    <th>Evening</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="row-head">Day 1</td>
-                    <td>Asakusa Temple</td>
-                    <td>Ueno Park</td>
-                    <td>Shibuya</td>
-                </tr>
-                <tr>
-                    <td class="row-head">Day 2</td>
-                    <td>Meiji Shrine</td>
-                    <td>Harajuku</td>
-                    <td>Shinjuku</td>
-                </tr>
-                <tr>
-                    <td class="row-head">Day 3</td>
-                    <td class="highlight" colspan="2">Tokyo DisneySea</td>
-                    <td>Odaiba</td>
-                </tr>
-            </tbody>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Project</th>
+                <th>Tools</th>
+                <th>What I did</th>
+            </tr>
+            <tr>
+                <td class="first">2026</td>
+                <td>Axoft Internship</td>
+                <td>Typescript, Azure</td>
+                <td>Implemented OCSF for the company logs</td>
+            </tr>
+            <tr>
+                <td class="first">2025</td>
+                <td>WMS</td>
+                <td>Python, Flask</td>
+                <td>Created a WMS in python with Flask</td>
+            </tr>
         </table>
 
-        <h2 class="subtitle">Travel Budget</h2>
-        <p class="text">A sample budget for transportation and meals in Tokyo.</p>
+        <h3 class="budget-title">Skills</h3>
+        <p>The tools and languages I use most.</p>
 
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Item</th>
-                    <th class="cost">Estimated Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="row-head" rowspan="2">Transportation</td>
-                    <td>Metro</td>
-                    <td class="cost">¥1,000</td>
-                </tr>
-                <tr>
-                    <td>Train</td>
-                    <td class="cost">¥1,500</td>
-                </tr>
-                <tr>
-                    <td class="row-head" rowspan="2">Food</td>
-                    <td>Lunch</td>
-                    <td class="cost">¥1,200</td>
-                </tr>
-                <tr>
-                    <td>Dinner</td>
-                    <td class="cost">¥2,000</td>
-                </tr>
-            </tbody>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Item</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td class="first" rowspan="2">Languages</td>
+                <td>Dutch</td>
+                <td>Native</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>Fluent</td>
+            </tr>
+            <tr>
+                <td class="first" rowspan="4">Programming</td>
+                <td>Python</td>
+                <td>Comfortable</td>
+            </tr>
+            <tr>
+                <td>C#</td>
+                <td>Comfortable</td>
+            </tr>
+            <tr>
+                <td>Typescript</td>
+                <td>Comfortable</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Learning</td>
+            </tr>
         </table>
     </section>
 
-    <section class="tagline">
-        <h2>Let the music move you.</h2>
-        <p>Live jazz · Good company · A night to remember</p>
-    </section>
+<footer>
+    <h3>Let's connect.</h3>
+    <p>
+        <a class="footer-btn" href="mailto:jerreljanssen2@gmail.com">Email</a>
+        <a class="footer-btn" href="https://github.com/jer-jerrel/webprogramming" target="_blank">GitHub</a>
+        <a class="footer-btn" href="https://www.linkedin.com/in/jerrel-janssen-2b4096267/" target="_blank">LinkedIn</a>
+    </p>
+</footer>
+
 </body>
 </html>
